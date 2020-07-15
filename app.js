@@ -1,12 +1,5 @@
-// Require
-
-/**
- * Tipos de require
- * Propia de node const fs = require('fs');
- * Qué no son nativos de NODE const fs = require('express');
- * Paquetes que nosotros escribimos const fs = require('./');
- */
 const argv = require('./config/yargs').argv;
+const colors = require('colors/safe');
 
 const { crearArchivo, listarTabla } = require('./multiplicar/multiplicar');
 
@@ -25,7 +18,8 @@ switch (comando) {
         break;
     case 'crear':
         crearArchivo(argv.base, argv.limite)
-            .then(archivo => console.log(`Archivo creado: ${archivo}`))
+            // .then(archivo => console.log(`Archivo creado: ${archivo.green}`))
+            .then(archivo => console.log(`Archivo creado: `, colors.green(archivo)))
             .catch(err => console.log(err));
         //Comando usado: node app crear --limite 5 -b 3
         //Salida de uso de comando  --> Archivo creado: tabla-3-al5.txt
