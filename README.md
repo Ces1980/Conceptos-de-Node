@@ -7,3 +7,10 @@ Ejecutar este comando
 ```
 npm install
 ```
+
+```
+
+ ![Screenshot](img/imagen.png)
+
+ ```
+
