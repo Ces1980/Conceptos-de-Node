@@ -8,9 +8,11 @@ Ejecutar este comando
 npm install
 ```
 
+
 ```
+```
+ ![Screenshot](img/imagen.png "Screenshot de los comandos")
 
- ![Screenshot](img/imagen.png)
-
- ```
+```
+```
 
