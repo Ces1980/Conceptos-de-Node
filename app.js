@@ -6,30 +6,7 @@
  * Qué no son nativos de NODE const fs = require('express');
  * Paquetes que nosotros escribimos const fs = require('./');
  */
-
-const argv = require('yargs')
-    .command('listar', 'Imprime en consola la tabla de multiplicar', {
-        base: {
-            demand: true,
-            alias: 'b'
-        },
-        limite: {
-            alias: 'l',
-            default: 10
-        }
-    })
-    .command('crear', 'Genera un archivo con tabla de multiplicar', {
-        base: {
-            demand: true,
-            alias: 'b'
-        },
-        limite: {
-            alias: 'l',
-            default: 10
-        }
-    })
-    .help()
-    .argv;
+const argv = require('./config/yargs').argv;
 
 const { crearArchivo, listarTabla } = require('./multiplicar/multiplicar');
 
